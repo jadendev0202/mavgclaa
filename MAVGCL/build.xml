@@ -16,7 +16,7 @@
 
 	<target name="mvn" depends="metadata">
 		<exec dir="./" executable="sh">
-			<arg line="-c ' C:/Autonomia_develop/USER/mvn/bin clean install'" />
+			<arg line="-c ' /usr/local/Cellar/maven/3.6.3_1/bin/mvn clean install -amd'" />
 		</exec>
 	</target>
 	<target name="deploy_windows" depends="mvn">
