@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+
+<fx:root type="javafx.scene.layout.VBox" prefWidth="750"
+	xmlns="http://javafx.com/javafx/8.0.51"
+	xmlns:fx="http://javafx.com/fxml/1"  styleClass="widget" style="-fx-padding: 10 15 10 15;"  >
+	<children>
+	   <Label layoutX="14.0" prefHeight="28.0" text="Vibration analysis" />
+		<VBox spacing="10" >
+			<children>
+			     <Label/>
+			     
+			     <LineChart fx:id="fft" maxHeight="273" createSymbols="false" animated="false" legendSide="TOP"  >
+			       <xAxis>
+				    <NumberAxis fx:id="xAxis" animated="false" side="BOTTOM"  />
+			       </xAxis>
+			       <yAxis>
+				     <NumberAxis fx:id="yAxis" animated="false" side="LEFT" />
+			        </yAxis>
+			     </LineChart>    
+			     <HBox spacing="15" alignment="CENTER_LEFT" >
+			      <children>
+			         <Label text="FFT source data" minWidth="50" />
+			         <ChoiceBox fx:id="source" prefHeight="19.0" prefWidth="125.0" />
+			         <Label text="Vibration metrics:" minWidth="40"  />
+			        <ProgressBar fx:id="vz" prefHeight="4.5" prefWidth="200"/>
+			     </children>
+			     </HBox>
+			</children>
+		</VBox>
+     </children>
+</fx:root>

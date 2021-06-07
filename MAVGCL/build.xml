@@ -1,0 +1,38 @@
+<project name="MAVGAnalysis" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+	
+
+	<target name="metadata" >
+		<echo>JDK used: jdk 16.0.1</echo>
+		<tstamp>
+			<format property="current.time" pattern="dd.MM.yyyy" />
+		</tstamp>
+		<buildnumber />
+		<echo>Current build number:${build.number}</echo>
+		<propertyfile file="src/main/java/com/comino/flight/build.info">
+			<entry key="build" value="${build.number}" />
+			<entry key="build_date" value="${current.time}" />
+		</propertyfile>
+	</target>
+
+	<target name="mvn" depends="metadata">
+		<exec dir="./" executable="sh">
+			<arg line="-c ' C:/Autonomia_develop/USER/mvn/bin clean install'" />
+		</exec>
+	</target>
+	<target name="deploy_window" depends="mvn">
+		<fx:deploy width="1230" height="865" outdir="dist/deploy" outfile="MAVGAnalysis" nativeBundles="msi">
+			<fx:application name="MAVGAnalysis" mainClass="com.comino.flight.MainApp" version="0.16">
+
+			</fx:application>
+			<fx:resources>
+				<fx:fileset requiredFor="startup"   dir="dist" includes="*.*" />
+			</fx:resources>
+			<fx:info title="MAVGAnalysis" vendor="ecmnet">
+				<fx:icon href="MAVGAnalysis.icns" />
+			</fx:info>
+			<fx:platform>
+				<fx:jvmarg value="-Xms1G"/>
+			</fx:platform>
+		</fx:deploy>
+	</target>
+</project>

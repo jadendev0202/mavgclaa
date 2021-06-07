@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<fx:root prefHeight="143" prefWidth="203.0" type="javafx.scene.layout.Pane"
+	styleClass="widget" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<Label layoutX="11.0" layoutY="14.0" text="Time axis" textFill="#1414da" />
+		<Separator layoutX="12.0" layoutY="27.0" prefHeight="0.0"
+			prefWidth="176.0" />
+		<ChoiceBox fx:id="totaltime" layoutX="140.0" layoutY="35.0"
+			prefHeight="19.0" prefWidth="47.0" />
+		<Label layoutX="13.0" layoutY="39.0" text="Frame displayed (sec)" />
+		<Label layoutX="11.0" layoutY="57.0" text="Replay" textFill="#1414da" />
+		<Separator layoutX="13.0" layoutY="70.0" prefHeight="0.0"
+			prefWidth="176.0" />
+		<Slider fx:id="scroll" blockIncrement="100.0" layoutX="13.0"
+			prefWidth="150.0" layoutY="82.0" majorTickUnit="0.1" max="1"
+			min="0" prefHeight="13.0" value="0" />
+		<Button fx:id="play" layoutY="80.0" layoutX="167.0" text="&#x25b6;"/>
+		<Separator layoutX="13.0" layoutY="102.0" prefHeight="0.0"
+			prefWidth="176.0" />
+		<ComboBox fx:id="keyfigures" prefHeight="19.0" prefWidth="125.0"
+			layoutY="112.0" layoutX="11.0" />
+		<Button fx:id="save" layoutX="140.0" layoutY="112.0"
+			mnemonicParsing="false" prefHeight="20.0" prefWidth="50.0" text="Save..."
+			textFill="#FFFFFF" />
+
+	</children>
+</fx:root>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
+
+<BorderPane prefHeight="853" prefWidth="1220.0"
+	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.comino.flight.MainApp">
+	<top>
+		<MenuBar fx:id="menubar" maxHeight="29.0"
+			BorderPane.alignment="TOP_LEFT" useSystemMenuBar="true">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem fx:id="m_about" mnemonicParsing="false"
+							text="About MAVGAnalysis">
+						</MenuItem>
+						<SeparatorMenuItem mnemonicParsing="false" />
+					    <MenuItem fx:id="m_import" mnemonicParsing="false" text="Open...">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="O"
+									control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem fx:id="m_import_last" mnemonicParsing="false" text="Open recent file"/>
+						<MenuItem fx:id="m_export" mnemonicParsing="false" text="Save as...">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="S"
+									control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem fx:id="m_csv" mnemonicParsing="false" text="Export as csv...">
+						</MenuItem>
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="r_px4log" mnemonicParsing="false"
+							text="Import latest log from device...">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="D"
+									control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem fx:id="r_dellog" mnemonicParsing="false"
+							text="Erase all local logs stored">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="L"
+									control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+							</accelerator>
+						</MenuItem>
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="m_prefs" mnemonicParsing="false"
+							text="Preferences...">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="P"
+									control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+							</accelerator>
+						</MenuItem>
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="m_log" mnemonicParsing="false"
+							text="Show local log...">
+						</MenuItem>
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="System">
+					<items>
+					<MenuItem fx:id="m_reload" mnemonicParsing="false"
+							text="Reload params from vehicle">
+							<accelerator>
+								<KeyCodeCombination alt="UP" code="P"
+									control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+							</accelerator>
+						</MenuItem>
+						<MenuItem fx:id="m_params" mnemonicParsing="false"
+							text="Upload parameters from file...">
+						</MenuItem>	
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="m_pdoc" mnemonicParsing="false"
+							text="Show PX4 parameter reference...">
+						</MenuItem>
+						<SeparatorMenuItem mnemonicParsing="false" />
+					 <MenuItem fx:id="m_def" mnemonicParsing="false"
+							text="Open custom key figure definition...">
+						</MenuItem>
+						<MenuItem fx:id="m_dump" mnemonicParsing="false"
+							text="Dump key figures to console">
+						</MenuItem>		
+						<SeparatorMenuItem mnemonicParsing="false" />	
+						<MenuItem fx:id="m_restart" mnemonicParsing="false"
+							text="Restart flight controller(s)">
+						</MenuItem>			
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+</BorderPane>

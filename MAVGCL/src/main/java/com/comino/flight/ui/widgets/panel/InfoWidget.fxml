@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+
+
+<fx:root  prefWidth="203.0" type="javafx.scene.layout.Pane"
+	styleClass="widget" xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<ListView fx:id="listview" layoutX="5" layoutY="5" prefWidth="194"
+			editable="false">
+		</ListView>
+	</children>
+</fx:root>

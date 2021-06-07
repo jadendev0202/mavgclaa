@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.control.CheckBox?>
+<?import com.comino.jfx.extensions.*?>
+
+<fx:root  prefWidth="203.0" type="javafx.scene.layout.Pane" styleClass="widget"
+	xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<GridPane layoutX="16.0" layoutY="10.0" prefWidth="194.0" >
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0"
+					minWidth="10.0" prefWidth="240.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints prefHeight="20.0" />
+				<RowConstraints prefHeight="20.0" />
+				<RowConstraints prefHeight="20.0" />
+				<RowConstraints prefHeight="20.0" />
+				<RowConstraints prefHeight="20.0" />
+				<RowConstraints prefHeight="30.0" />
+			</rowConstraints>
+			<children>
+				<DashLabelLED fx:id="armed"    text="Motors armed"
+					GridPane.rowIndex="0" />
+				<DashLabelLED fx:id="althold"  text="Altitude hold"
+					GridPane.rowIndex="1" />
+				<DashLabelLED fx:id="poshold"  text="Position hold"
+					GridPane.rowIndex="2" />
+				<DashLabelLED fx:id="mission"  text="Auto mode" rate="300"
+					GridPane.rowIndex="3" />
+				<DashLabelLED fx:id="offboard" text="Offboard" rate="300"
+					GridPane.rowIndex="4" />
+				<DashLabelLED fx:id="landed"   text="Landed"  rate="300"
+					GridPane.rowIndex="5" />
+			</children>
+		</GridPane>
+	</children>
+</fx:root>

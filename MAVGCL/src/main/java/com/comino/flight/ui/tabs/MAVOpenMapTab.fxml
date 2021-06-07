@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import com.comino.flight.ui.widgets.gps.details.GPSDetailsWidget?>
+<?import com.comino.flight.ui.widgets.panel.AirWidget?>
+<?import com.comino.jfx.extensions.*?>
+
+<fx:root styleClass="widget" type="javafx.scene.layout.BorderPane"
+	xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<Pane prefHeight="34">
+			<children>
+				<HBox layoutY="7.0" layoutX="10.0" spacing="10.0" alignment="CENTER_LEFT">
+					<children>
+					    <Label text="View:" />
+						<Slider fx:id="zoom" blockIncrement="5.0" majorTickUnit="1.0"
+							max="20.76" min="15.0" prefHeight="15.0" prefWidth="161.0"
+							showTickMarks="true" value="18.2" />
+						<ChoiceBox fx:id="gpssource" prefWidth="100.0" maxHeight="17.0"  />
+						<Label text="Center on" prefHeight="19.0" />
+						<ChoiceBox fx:id="center" maxHeight="17.0" prefWidth="60.0" />
+						<ChoiceBox fx:id="provider" prefWidth="100.0" maxHeight="17.0" />
+						<StoredCheckBox fx:id="viewdetails" text="Details" />
+						<StoredCheckBox fx:id="aircontrol" text="Compass" />
+						<Button fx:id="export" prefHeight="19.0" prefWidth="110.0"
+							text="PNG export" />
+					</children>
+				</HBox>
+			</children>
+		</Pane>
+	</top>
+	<center>
+		<StackPane alignment="TOP_LEFT">
+			<children>
+				<BorderPane fx:id="mapviewpane" prefWidth="800" />
+				<GPSDetailsWidget fx:id="gpsdetails" moveable="true"
+					initialWidth="240" initialHeight="215" visible="false" styleClass="glass">
+
+				</GPSDetailsWidget>
+				<AirWidget fx:id="air" moveable="true" maxWidth="160" maxHeight="160"/>
+			</children>
+		</StackPane>
+	</center>
+	<bottom>
+		<Pane prefHeight="10" />
+	</bottom>
+	<left>
+		<Pane prefWidth="10" />
+	</left>
+	<right>
+		<Pane prefWidth="10" />
+	</right>
+</fx:root>

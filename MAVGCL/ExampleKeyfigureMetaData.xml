@@ -1,0 +1,57 @@
+<AnalysisDataModel version="0.4" description ="Example: UseCase A">
+
+    <!-- Altitudes -->
+
+	<KeyFigure desc="Alt.SL" uom="m" mask="#0.0" key="ALTSL">
+		<MSPSource class="hud" field="ag"></MSPSource>
+		<PX4Source field="GPOS.Alt"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.alt"/>
+		<Groups>
+			<Group>UseCase A</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Alt.GL" uom="m" mask="#0.0" key="ALTGL">
+		<MSPSource class="hud" field="al"></MSPSource>
+		<Groups>
+			<Group>UseCase A</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Alt.baro" uom="m" mask="#0.0" key="ALTBARO">
+		<MSPSource class="hud" field="ap"></MSPSource>
+		<PX4Source field="SENS.BaroAlt"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.pressure_alt"></ULogSource>
+		<Groups>
+			<Group>UseCase A</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Flow Quality" mask="#0.0" uom="" key="FLOWQL">
+		<MSPSource class="raw" field="fq">
+		   <Converter class="ExpressionConverter" expression="FLOWQL/255" />
+		</MSPSource>
+		<PX4Source field="FLOW.Qlty">
+		   <Converter class="ExpressionConverter" expression="FLOWQL/255" />
+		</PX4Source>
+		<ULogSource field="optical_flow_0.quality">
+		   <Converter class="ExpressionConverter" expression="FLOWQL/255" />
+		</ULogSource>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>PX4Log Sensors</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="VirtDemo" uom="m" mask="#0.00" key="VIRTDEMO">
+		<VirtualSource>
+		    <Converter class="VirtualConverter" expression="(LPOSZ - SPLPOSZ)/SPLPOSZ" var0="LPOSZ" var1="SPLPOSZ"/>
+		</VirtualSource>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+
+
+</AnalysisDataModel>

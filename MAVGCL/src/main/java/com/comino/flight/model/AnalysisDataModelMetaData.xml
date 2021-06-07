@@ -1,0 +1,1978 @@
+<AnalysisDataModel version="0.7" description ="Built-In model definition">
+
+   <!-- EKF2 Innovations -->
+
+    <KeyFigure desc="EKF.Inn.Flow.X" uom="" mask="#0.00" key="EKFINFLOWX">
+		<ULogSource field="ekf2_innovations_0.flow_innov[0]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	 <KeyFigure desc="EKF.Inn.Flow.Y" uom="" mask="#0.00" key="EKFINFLOWY">
+		<ULogSource field="ekf2_innovations_0.flow_innov[1]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	 <KeyFigure desc="EKF.Inn.HAGL" uom="" mask="#0.00" key="EKFINHAGL">
+		<ULogSource field="ekf2_innovations_0ALT.hagl_innov"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	 <KeyFigure desc="EKF.Inn.Head" uom="" mask="#0.00" key="EKFINHEAD">
+		<ULogSource field="ekf2_innovations_0.heading_innov"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EKF.Inn.VelP0" uom="" mask="#0.00" key="EKFINVELP0">
+		<ULogSource field="ekf2_innovations_0.vel_pos_innov[0]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EKF.Inn.VelP1" uom="" mask="#0.00" key="EKFINVELP1">
+		<ULogSource field="ekf2_innovations_0.vel_pos_innov[1]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EKF.Inn.VelP2" uom="" mask="#0.00" key="EKFINVELP2">
+		<ULogSource field="ekf2_innovations_0.vel_pos_innov[2]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EKF.Inn.VelP3" uom="" mask="#0.00" key="EKFINVELP3">
+		<ULogSource field="ekf2_innovations_0.vel_pos_innov[3]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EKF.Inn.VelP4" uom="" mask="#0.00" key="EKFINVELP4">
+		<ULogSource field="ekf2_innovations_0.vel_pos_innov[4]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EKF.Inn.VelP5" uom="" mask="#0.00" key="EKFINVELP5">
+		<ULogSource field="ekf2_innovations_0.vel_pos_innov[5]"/>
+		<Groups>
+			<Group>EKF2 Innovations</Group>
+		</Groups>
+	</KeyFigure>
+
+
+    <!-- EKF2 Innovation Status -->
+
+    <KeyFigure desc="Tst.Ratio Hgt." uom="" mask="#0.00" key="EKFHTR">
+        <MSPSource class="est" field="haglRatio"></MSPSource>
+		<ULogSource field="estimator_status_0.hgt_test_ratio"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Tst.Ratio Vel." uom="" mask="#0.00" key="EKFVTR">
+	    <MSPSource class="est" field="velRatio"></MSPSource>
+		<ULogSource field="estimator_status_0.vel_test_ratio"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Tst.Ratio Pos." uom="" mask="#0.00" key="EKFPTR">
+	 <MSPSource class="est" field="horiRatio"></MSPSource>
+		<ULogSource field="estimator_status_0.pos_test_ratio"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Tst.Ratio GPS" uom="" mask="#0.00" key="EKFGTR">
+		<ULogSource field="estimator_status_0.gps_test_ratio"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Tst.Ratio Mag." uom="" mask="#0.00" key="EKFMTR">
+	    <MSPSource class="est" field="magRatio"></MSPSource>
+		<ULogSource field="estimator_status_0.mag_test_ratio"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Est.Flags" uom="" mask="#" key="EKFFLG">
+	    <MSPSource class="est" field="flags"></MSPSource>
+	    <ULogSource field="estimator_status_0.solution_status_flags"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Control.Flags" uom="" mask="#" key="EKFCTLFLG">
+	    <ULogSource field="estimator_status_flags_0.control_mode_flags"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Height.Mode.RNG" uom="" mask="#" key="CTLFLGH_RNG">
+	    <ULogSource field="estimator_status_flags_0.cs_rng_hgt"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Height.Mode.EV" uom="" mask="#" key="CTLFLGH_EV">
+	    <ULogSource field="estimator_status_flags_0.cs_ev_hgt"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Height.Mode.BARO" uom="" mask="#" key="CTLFLGH_BARO">
+	    <ULogSource field="estimator_status_flags_0.cs_baro_hgt"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Height.Mode.GPS" uom="" mask="#" key="CTLFLGH_GPS">
+	    <ULogSource field="estimator_status_flags_0.cs_gps_hgt"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+	
+	 <!-- Vibration -->
+
+	
+	<KeyFigure desc="Vibr.Metrics" uom="rad/s" mask="#0.000" key="VIBMET">
+	    <MSPSource class="vibration" field="vibz"></MSPSource>
+		<ULogSource field="estimator_status_0.vibe[2]"/>
+		<Groups>
+			<Group>Vibration</Group>
+		</Groups>
+	</KeyFigure>
+	
+
+	<!-- EKF2 state estimations -->
+
+
+    <KeyFigure desc="IMU X delta ang.state" uom="rad/s" mask="#0.0" key="EKFIXDA">
+		<ULogSource field="estimator_status.states[10]"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+	 <KeyFigure desc="IMU Y delta ang.state" uom="rad/s" mask="#0.0" key="EKFIYDA">
+		<ULogSource field="estimator_status.states[11]"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+	 <KeyFigure desc="IMU Z delta ang.state" uom="rad/s" mask="#0.0" key="EKFIZDA">
+		<ULogSource field="estimator_status.states[12]"/>
+		<Groups>
+			<Group>EKF2 States</Group>
+		</Groups>
+	</KeyFigure>
+
+
+
+    <!-- Altitudes -->
+
+	<KeyFigure desc="Alt.Ground level" uom="m" mask="#0.0" key="ALTSL">
+		<MSPSource class="hud" field="ag"></MSPSource>
+		<PX4Source field="GPOS.Alt"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.alt"/>
+		<Groups>
+			<Group>Altitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Alt.Local" uom="m" mask="#0.00" key="ALTGL">
+		<MSPSource class="hud" field="al"></MSPSource>
+		<PX4Source field="LPOS.Dist"></PX4Source>
+	<!--  <ULogSource field="vehicle_local_position_0.dist_bottom"></ULogSource> -->
+		<Groups>
+			<Group>Altitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Alt.Relative" uom="m" mask="#0.00" key="ALTRE">
+		<MSPSource class="hud" field="ar"></MSPSource>
+		<PX4Source field="LPOS.Dist"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.dist_bottom"></ULogSource>
+		<Groups>
+			<Group>Altitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Alt.Baro" uom="m" mask="#0.0" key="ALTBARO">
+		<MSPSource class="hud" field="ap"></MSPSource>
+		<PX4Source field="SENS.BaroAlt"></PX4Source>
+		<ULogSource field="sensor_combined_0.baro_alt_meter"></ULogSource>
+		<Groups>
+			<Group>Altitude</Group>
+			<Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Alt.GPS" uom="m" mask="#0.0" key="ALTGPS">
+		<MSPSource class="gps" field="altitude"></MSPSource>
+		<ULogSource field="vehicle_gps_position_0.alt"/>
+		<Groups>
+			<Group>Altitude</Group>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Alt.Terrain" uom="m" mask="#0.00" key="ALTTR">
+		<MSPSource class="hud" field="at"></MSPSource>
+		<PX4Source field="GPOS.TALT"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.terrain_alt"/>
+		<Groups>
+			<Group>Altitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Alt.Clearance" uom="m" mask="#0.00" key="ALTBC">
+		<MSPSource class="hud" field="bc"></MSPSource>
+		<Groups>
+			<Group>Altitude</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<!-- Local position  -->
+
+	<KeyFigure desc="LPos.X" uom="m" mask="auto" key="LPOSX">
+		<MSPSource class="state" field="l_x"></MSPSource>
+		<PX4Source field="LPOS.X"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.x"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="LPos.Y" uom="m" mask="auto" key="LPOSY">
+		<MSPSource class="state" field="l_y"></MSPSource>
+		<PX4Source field="LPOS.Y"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.y"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="LPos.Z" uom="m" mask="auto" key="LPOSZ">
+		<MSPSource class="state" field="l_z"></MSPSource>
+		<PX4Source field="LPOS.Z"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.z"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="LPos.Yaw" uom="rad" mask="#0.000" key="LPOSW">
+		<MSPSource class="state" field="h"></MSPSource>
+		<ULogSource field="vehicle_local_position_0.yaw"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Local position speed -->
+
+	<KeyFigure desc="LPos.VX" uom="m/s" mask="#0.00" key="LPOSVX">
+		<MSPSource class="state" field="l_vx"></MSPSource>
+		<PX4Source field="LPOS.VX"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.vx"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="LPos.VY" uom="m/s" mask="#0.00" key="LPOSVY">
+		<MSPSource class="state" field="l_vy"></MSPSource>
+		<PX4Source field="LPOS.VY"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.vy"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="LPos.VZ" uom="m/s" mask="#0.00" key="LPOSVZ">
+		<MSPSource class="state" field="l_vz"></MSPSource>
+		<PX4Source field="LPOS.VZ"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.vz"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Local position setpoint -->
+
+	<KeyFigure desc="SP.LPos.X" uom="m" mask="#0.00" key="SPLPOSX">
+		<MSPSource class="target_state" field="l_x"></MSPSource>
+		<PX4Source field="LPSP.X"></PX4Source>
+		<ULogSource field="vehicle_local_position_setpoint_0.x"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.LPos.Y" uom="m" mask="#0.00" key="SPLPOSY">
+		<MSPSource class="target_state" field="l_y"></MSPSource>
+		<PX4Source field="LPSP.Y"></PX4Source>
+		<ULogSource field="vehicle_local_position_setpoint_0.y"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.LPos.Z" uom="m" mask="#0.00" key="SPLPOSZ">
+		<MSPSource class="target_state" field="l_z"></MSPSource>
+		<PX4Source field="LPSP.Z"></PX4Source>
+		<ULogSource field="vehicle_local_position_setpoint_0.z"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.LPos.Yaw" uom="rad" mask="#0.00" key="SPLPOSYAW">
+		<MSPSource class="target_state" field="h"></MSPSource>
+		<ULogSource field="vehicle_local_position_setpoint_0.yaw"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Local position speed setpoint -->
+
+	<KeyFigure desc="SP.LPos.VX" uom="m/s" mask="#0.00" key="SPLPOSVX">
+		<MSPSource class="target_state" field="l_vx"></MSPSource>
+		<PX4Source field="LPSP.VX"></PX4Source>
+		<ULogSource field="vehicle_local_position_setpoint_0.vx"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.LPos.VY" uom="m/s" mask="#0.00" key="SPLPOSVY">
+		<MSPSource class="target_state" field="l_vy"></MSPSource>
+		<PX4Source field="LPSP.VY"></PX4Source>
+		<ULogSource field="vehicle_local_position_setpoint_0.vy"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.LPos.VZ" uom="m/s" mask="#0.00" key="SPLPOSVZ">
+		<MSPSource class="target_state" field="l_vz"></MSPSource>
+		<PX4Source field="LPSP.VZ"></PX4Source>
+		<ULogSource field="vehicle_local_position_setpoint_0.vz"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Local position acceleration setpoint -->
+
+	<KeyFigure desc="SP.LPos.AccX" uom="m/s^2" mask="#0.00" key="SPLPOSAX">
+		<ULogSource field="vehicle_local_position_setpoint_0.acc_x"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.LPos.AccY" uom="m/s^2" mask="#0.00" key="SPLPOSAY">
+		<ULogSource field="vehicle_local_position_setpoint_0.acc_y"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.LPos.AccZ" uom="m/s^2" mask="#0.00" key="SPLPOSAZ">
+		<ULogSource field="vehicle_local_position_setpoint_0.acc_z"></ULogSource>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<!-- Attitude  -->
+
+	<KeyFigure desc="Roll" uom="rad" mask="#0.00" key="ROLL">
+		<MSPSource class="attitude" field="r"></MSPSource>
+		<PX4Source  field="ATT.Roll"></PX4Source>
+		<ULogSource>
+		  <Converter class="QuaternionConverter" p1="vehicle_attitude_0.q" p2="0"/>
+		</ULogSource>
+		<Groups>
+			<Group>Attitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+		<Validity min="-2" max="2"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Pitch" uom="rad" mask="#0.00" key="PITCH">
+		<MSPSource class="attitude" field="p"></MSPSource>
+		<PX4Source field="ATT.Pitch"></PX4Source>
+		<ULogSource>
+		   <Converter class="QuaternionConverter" p1="vehicle_attitude_0.q" p2="1"/>
+		</ULogSource>
+		<Groups>
+			<Group>Attitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+		<Validity min="-2" max="2"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Yaw" uom="rad" mask="#0.00" key="YAW">
+		<MSPSource class="attitude" field="y"></MSPSource>
+		<PX4Source field="ATT.Yaw"></PX4Source>
+		<ULogSource>
+		 <Converter class="QuaternionConverter" p1="vehicle_attitude_0.q" p2="2"/>
+		</ULogSource>
+		<Groups>
+			<Group>Attitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Attitude rates -->
+
+	<KeyFigure desc="RollRate" uom="rad/s" mask="#0.00" key="ROLLR">
+		<MSPSource class="attitude" field="rr"></MSPSource>
+		<PX4Source field="ATT.RollRate"></PX4Source>
+		<ULogSource field="vehicle_attitude_0.rollspeed"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="PitchRate" uom="rad/s" mask="#0.00" key="PITCHR">
+		<MSPSource class="attitude" field="pr"></MSPSource>
+		<ULogSource field="vehicle_attitude_0.pitchspeed"/>
+		<PX4Source field="ATT.PitchRate"></PX4Source>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="YawRate" uom="rad/s" mask="#0.00" key="YAWR">
+		<MSPSource class="attitude" field="yr"></MSPSource>
+		<PX4Source field="ATT.YawRate"></PX4Source>
+		<ULogSource field="vehicle_attitude_0.yawspeed"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+		<!-- Attitude  setpoint -->
+
+	<KeyFigure desc="Sp.Roll" uom="rad" mask="#0.00" key="SPROLL">
+		<MSPSource class="attitude" field="sr"></MSPSource>
+		<PX4Source field="ATSP.RollSP"></PX4Source>
+		<ULogSource field="vehicle_attitude_setpoint_0.roll_body"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Sp.Pitch" uom="rad" mask="#0.00" key="SPPITCH">
+		<MSPSource class="attitude" field="sp"></MSPSource>
+		<PX4Source field="ATSP.PitchSP"></PX4Source>
+		<ULogSource field="vehicle_attitude_setpoint_0.pitch_body"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.Yaw" uom="rad" mask="#0.00" key="SPYAW">
+		<MSPSource class="attitude" field="sy"></MSPSource>
+		<PX4Source field="ATSP.YawSP"></PX4Source>
+		<ULogSource field="vehicle_attitude_setpoint_0.yaw_body"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<KeyFigure desc="Thrust" uom="%" mask="#0.00" key="THRUST">
+	    <MSPSource class="attitude" field="st"></MSPSource>
+		<PX4Source field="ATSP.ThrustSP"></PX4Source>
+		<ULogSource field="vehicle_attitude_setpoint_0.thrust"/>
+		<Groups>
+			<Group>Attitude</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Attitude rates setpoint -->
+
+	<KeyFigure desc="Sp.RollRate" uom="rad/s" mask="#0.00" key="SPROLLR">
+		<MSPSource class="attitude" field="srr"></MSPSource>
+		<PX4Source field="ARSP.RollRateSP"></PX4Source>
+		<ULogSource field="vehicle_rates_setpoint_0.roll"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+
+	</KeyFigure>
+
+	<KeyFigure desc="Sp.PitchRate" uom="rad/s" mask="#0.00" key="SPPITCHR">
+		<MSPSource class="attitude" field="spr"></MSPSource>
+		<PX4Source field="ARSP.PitchRateSP"></PX4Source>
+		<ULogSource field="vehicle_rates_setpoint_0.pitch"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+
+	</KeyFigure>
+
+	<KeyFigure desc="SP.YawRate" uom="rad/s" mask="#0.00" key="SPYAWR">
+		<MSPSource class="attitude" field="syr"></MSPSource>
+		<PX4Source field="ARSP.YawRateSP"></PX4Source>
+		<ULogSource field="vehicle_rates_setpoint_0.yaw"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="ThrustRate" uom="" mask="#0.00" key="THRUSTR">
+		<ULogSource field="vehicle_rates_setpoint_0.thrust"/>
+		<Groups>
+			<Group>Attitude</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Global position -->
+
+	<KeyFigure desc="Global.Lat." uom="°" mask="#0.0000000" key="GLOBLAT">
+		<MSPSource class="state" field="g_lat"></MSPSource>
+		<PX4Source field="GPOS.Lat"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.lat"/>
+		<Groups>
+			<Group>Global Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Global.Lon." uom="°" mask="#0.0000000" key="GLOBLON">
+		<MSPSource class="state" field="g_lon"></MSPSource>
+		<PX4Source field="GPOS.Lon"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.lon"/>
+		<Groups>
+			<Group>Global Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Home.Lat." uom="°" mask="#0.0000000" key="HOMLAT">
+		<MSPSource class="home_state" field="g_lat"></MSPSource>
+		<PX4Source field="LPOS.RLat"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.ref_lat"/>
+		<Groups>
+			<Group>Global Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Home.Lon." uom="°" mask="#0.0000000" key="HOMLON">
+		<MSPSource class="home_state" field="g_lon"></MSPSource>
+		<PX4Source field="LPOS.RLon"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.ref_lon"/>
+		<Groups>
+			<Group>Global Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Home.Alt." uom="°" mask="#0.0" key="HOMALT">
+	    <MSPSource class="home_state" field="g_alt"></MSPSource>
+		<PX4Source field="LPOS.RAlt"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.ref_alt"/>
+		<Groups>
+			<Group>Global Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Global.Speed.N" uom="cm/s" mask="#0.00" key="GLOBVN">
+		<MSPSource class="state" field="g_vx"></MSPSource>
+		<PX4Source field="GPOS.VelN"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.vel_n"/>
+		<Groups>
+			<Group>Global Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Global.Speed.E" uom="cm/s" mask="#0.00" key="GLOBVE">
+		<MSPSource class="state" field="g_vy"></MSPSource>
+		<PX4Source field="GPOS.VelE"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.vel_e"/>
+		<Groups>
+			<Group>Global Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Global.Speed.D" uom="cm/s" mask="#0.00" key="GLOBVD">
+		<MSPSource class="state" field="g_vz"></MSPSource>
+		<PX4Source field="GPOS.VelD"></PX4Source>
+		<ULogSource field="vehicle_global_position_0.vel_d"/>
+		<Groups>
+			<Group>Global Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.Global.Pos.VX" uom="cm/s" mask="#0.00" key="SPGLOBVX">
+		<ULogSource field="vehicle_global_velocity_setpoint_0.vx"/>
+		<Groups>
+			<Group>Global Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.Global.Pos.VY" uom="cm/s" mask="#0.00" key="SPGLOBVY">
+		<ULogSource field="vehicle_global_velocity_setpoint_0.vy"/>
+		<Groups>
+			<Group>Global Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="SP.Global.Pos.VZ" uom="cm/s" mask="#0.00" key="SPGLOBVZ">
+		<ULogSource field="vehicle_global_velocity_setpoint_0.vz"/>
+		<Groups>
+			<Group>Global Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Heading" uom="°" mask="#0.0" key="HEAD">
+		<MSPSource class="hud" field="h"></MSPSource>
+		<ULogSource field="vehicle_local_position_0.yaw">
+		   <Converter class="Rad2DegreeConverter" expression="HEAD" />
+		</ULogSource>
+		<Groups>
+			<Group>Global Position</Group>
+			<Group>Local Position</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Ground.Speed" uom="m/s" mask="#0.0" key="GNDV">
+		<MSPSource class="state" field="v"></MSPSource>
+		<Groups>
+			<Group>Telemetry</Group>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Vert.Speed" uom="m/s" mask="#0.0" key="CLIMB">
+		<MSPSource class="state" field="l_vz">
+		    <Converter class="ExpressionConverter" expression="-CLIMB" />
+		</MSPSource>
+		<ULogSource field="vehicle_local_position_0.dist_bottom_rate"/>
+		<Groups>
+			<Group>Telemetry</Group>
+			<Group>Local Position</Group>
+		</Groups>
+		<Validity min="-2.5" max="2.5"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Air speed" uom="m/s" mask="#0.0" key="AIRV">
+		<MSPSource class="hud" field="as"></MSPSource>
+		<PX4Source field="AIRS.TrueSpeed"></PX4Source>
+		<ULogSource field="airspeed_0.true_airspeed_m_s"/>
+		<Groups>
+			<Group>Global Position</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<!-- Servo output -->
+
+	<KeyFigure desc="Output 1" uom="" mask="#0.0" key="SERVO1">
+		<MSPSource class="servo" field="servo1"></MSPSource>
+		<PX4Source field="OUT0.Out0"></PX4Source>
+		<ULogSource field="actuator_outputs_1.output[0]"/>
+		<Groups>
+			<Group>PWM Output</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Output 2" uom="" mask="#0.0" key="SERVO2">
+		<MSPSource class="servo" field="servo2"></MSPSource>
+		<PX4Source field="OUT0.Out1"></PX4Source>
+		<ULogSource field="actuator_outputs_1.output[1]"/>
+		<Groups>
+			<Group>PWM Output</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Output 3" uom="" mask="#0.0" key="SERVO3">
+		<MSPSource class="servo" field="servo3"></MSPSource>
+		<PX4Source field="OUT0.Out2"></PX4Source>
+		<ULogSource field="actuator_outputs_1.output[2]"/>
+		<Groups>
+			<Group>PWM Output</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Output 4" uom="" mask="#0.0" key="SERVO4">
+		<MSPSource class="servo" field="servo4"></MSPSource>
+		<PX4Source field="OUT0.Out3"></PX4Source>
+		<ULogSource field="actuator_outputs_1.output[3]"/>
+		<Groups>
+			<Group>PWM Output</Group>
+		</Groups>
+	</KeyFigure>
+
+	
+
+	<!-- Raw data -->
+
+	<KeyFigure desc="Flow.X" uom="rad/s" mask="#0.00" key="FLOWX">
+		<MSPSource class="raw" field="fX"></MSPSource>
+		<PX4Source field="FLOW.RawX"></PX4Source>
+		<ULogSource field="optical_flow_0.pixel_flow_x_integral"/>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Optical Flow</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Flow.Y" uom="rad/s" mask="#0.00" key="FLOWY">
+		<MSPSource class="raw" field="fY"></MSPSource>
+		<PX4Source field="FLOW.RawY"></PX4Source>
+		<ULogSource field="optical_flow_0.pixel_flow_y_integral"/>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Optical Flow</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="FLow.Dist." uom="m" mask="#0.00" key="FLOWDI">
+		<MSPSource class="raw" field="fd">
+		    <Converter class="SignConverter" expression="LIDAR" />
+		</MSPSource>
+		<PX4Source field="FLOW.Dist"></PX4Source>
+		<ULogSource field="optical_flow_0.ground_distance_m"/>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Optical Flow</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Flow.Quality" mask="#0.0" uom="%" key="FLOWQL">
+		<MSPSource class="raw" field="fq">
+		  <!--   <Converter class="ExpressionConverter" expression="FLOWQL/255" /> -->
+		   <Converter class="LowPassConverter" p1 ="255" p2 = "0.15"/>
+		</MSPSource>
+		<PX4Source field="FLOW.Qlty">
+		   <Converter class="LowPassConverter" p1 ="255" p2 = "0.15"/>
+		</PX4Source>
+		<ULogSource field="optical_flow_0.quality">
+		   <Converter class="LowPassConverter" p1 ="255" p2 = "0.15"/>
+		</ULogSource>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Optical Flow</Group>
+		</Groups>
+		<Validity min="0.05" max="1.0"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Flow.Gyro.X" uom="m" mask="#0.00" key="FLOWGYX">
+	    <MSPSource class="raw" field="fgX"></MSPSource>
+		<ULogSource field="optical_flow_0.gyro_x_rate_integral"/>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Optical Flow</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Flow.Gyro.Y" uom="m" mask="#0.00" key="FLOWGYY">
+	    <MSPSource class="raw" field="fgY"></MSPSource>
+		<ULogSource field="optical_flow_0.gyro_y_rate_integral"/>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Optical Flow</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Flow.Gyro.Z" uom="m" mask="#0.00" key="FLOWGYZ">
+	    <MSPSource class="raw" field="fgZ"></MSPSource>
+		<ULogSource field="optical_flow_0.gyro_z_rate_integral"/>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Optical Flow</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="RangeFinder Dist." uom="m" mask="#0.00" key="LIDAR">
+		<MSPSource class="raw" field="di">
+		    <Converter class="SignConverter" expression="LIDAR" />
+		</MSPSource>
+		<PX4Source field="DIST.Distance"></PX4Source>
+		<ULogSource field="distance_sensor_0.current_distance"/>
+		<Groups>
+			<Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="RangeFinder Dist.Cov." uom="m" mask="#0.00" key="LIDARCOV">
+		<MSPSource class="raw" field="dicov"></MSPSource>
+		<PX4Source field="DIST.Covariance"></PX4Source>
+		<ULogSource field="distance_sensor_0.covariance"/>
+		<Groups>
+			<Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Acc.X" uom="m/s^2" mask="#0.00" key="ACCX">
+		<MSPSource class="imu" field="accx"></MSPSource>
+		<PX4Source field="IMU.AccX"></PX4Source>
+		<ULogSource field="sensor_combined_0.accelerometer_m_s2[0]"></ULogSource>
+		<Groups>
+		    <Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="Acc.Y" uom="m/s^2" mask="#0.00" key="ACCY">
+		<MSPSource class="imu" field="accy"></MSPSource>
+		<PX4Source field="IMU.AccY"></PX4Source>
+		<ULogSource field="sensor_combined_0.accelerometer_m_s2[1]"></ULogSource>
+		<Groups>
+		    <Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="Acc.Z" uom="m/s^2" mask="#0.00" key="ACCZ">
+		<MSPSource class="imu" field="accz"></MSPSource>
+		<PX4Source field="IMU.AccZ"></PX4Source>
+		<ULogSource field="sensor_combined_0.accelerometer_m_s2[2]"></ULogSource>
+		<Groups>
+			<Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Mag.X" uom="Gauss" mask="#0.00" key="MAGX">
+		<MSPSource class="imu" field="magx"></MSPSource>
+		<PX4Source field="IMU.MagX"></PX4Source>
+		<ULogSource field="vehicle_magnetometer_0.magnetometer_ga[0]"></ULogSource>
+		<Groups>
+		    <Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Mag.Y" uom="Gauss" mask="#0.00" key="MAGY">
+		<MSPSource class="imu" field="magy"></MSPSource>
+		<PX4Source field="IMU.MagY"></PX4Source>
+		<ULogSource field="vehicle_magnetometer_0.magnetometer_ga[1]"></ULogSource>
+		<Groups>
+		    <Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Mag.Z" uom="Gauss" mask="#0.00" key="MAGZ">
+		<MSPSource class="imu" field="magz"></MSPSource>
+		<PX4Source field="IMU.MagZ"></PX4Source>
+		<ULogSource field="vehicle_magnetometer_0.magnetometer_ga[2]"></ULogSource>
+		<Groups>
+		    <Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<KeyFigure desc="Gyro.X" uom="rad/s" mask="#0.00" key="GYROX">
+		<MSPSource class="imu" field="gyrox"></MSPSource>
+		<PX4Source field="IMU.GyroX"></PX4Source>
+		<ULogSource field="sensor_combined_0.gyro_rad[0]"></ULogSource>
+		<Groups>
+		    <Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Gyro.Y" uom="rad/s" mask="#0.00" key="GYROY">
+		<MSPSource class="imu" field="gyroy"></MSPSource>
+		<PX4Source field="IMU.GyroY"></PX4Source>
+		<ULogSource field="sensor_combined_0.gyro_rad[1]"></ULogSource>
+		<Groups>
+		    <Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Gyro.Z" uom="rad/s" mask="#0.00" key="GYROZ">
+		<MSPSource class="imu" field="gyroz"></MSPSource>
+		<PX4Source field="IMU.GyroZ"></PX4Source>
+		<ULogSource field="sensor_combined_0.gyro_rad[2]"></ULogSource>
+		<Groups>
+			<Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Baro Temperature" uom="°C" mask="#0.00" key="BAROTEMP">
+		<ULogSource field="sensor_combined_0.baro_temp_celcius"></ULogSource>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<KeyFigure desc="Base.Lat." uom="°" mask="#0.0000000" key="BASELAT">
+		<MSPSource class="base" field="latitude"></MSPSource>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Base.Lon." uom="°" mask="#0.0000000" key="BASELON">
+		<MSPSource class="base" field="longitude"></MSPSource>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Base.Alt." uom="°" mask="#0" key="BASEALT">
+	    <MSPSource class="base" field="altitude"></MSPSource>
+		<Groups>
+			<Group>Raw data</Group>
+			<Group>Telemetry</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Base.No.Sat." uom="" mask="#0" key="BASENO">
+		<MSPSource class="base" field="numsat"></MSPSource>
+		<Groups>
+			<Group>Raw data</Group>
+		</Groups>
+		<Validity min="6" max="30"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Abs.Pressure" uom="hPa" mask="#0" key="ABSPRES">
+		<MSPSource class="imu" field="abs_pressure"></MSPSource>
+		<PX4Source field="SENS.BaroPres"></PX4Source>
+		<ULogSource field="sensor_baro_0.pressure"/>
+		<Groups>
+			<Group>Raw data</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s9" uom="m" mask="#0.0" key="HAGLRATIO">
+		<MSPSource class="est" field="haglRatio"></MSPSource>
+		<ULogSource field="estimator_status_0.states[9]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s10" uom="m" mask="#0.00" key="TASRATIO">
+		<MSPSource class="est" field="tasRatio"></MSPSource>
+		<ULogSource field="estimator_status_0.states[10]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s11" uom="m" mask="#0.0" key="MAGRATIO">
+		<MSPSource class="est" field="magRatio"></MSPSource>
+		<ULogSource field="estimator_status_0.states[11]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Vel.Ratio" uom="" mask="#0.00" key="VELRATIO">
+		<MSPSource class="est" field="velRatio"></MSPSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="HorizPos.Ratio" uom="" mask="#0.00" key="HORIZRATIO">
+		<MSPSource class="est" field="horizRatio"></MSPSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="VertPos.Ratio" uom="" mask="#0.00" key="VERTRATIO">
+		<MSPSource class="est" field="vertRatio"></MSPSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Horiz.Accurracy" uom="m" mask="±#0.00" key="GPHACCUR">
+		<MSPSource class="est" field="posHorizAccuracy"></MSPSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+		<Validity min="0" max="5.0"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Vert.Accurracy" uom="m" mask="±#0.00" key="GPVACCUR">
+		<MSPSource class="est" field="posVertAccuracy"></MSPSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+		<Validity min="0" max="5.0"/>
+	</KeyFigure>
+
+	<KeyFigure desc="EstimatorFlags" uom="" mask="#0" key="ESTFLAGS">
+		<MSPSource class="est" field="flags"></MSPSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- GPS Data -->
+
+
+    <KeyFigure desc="GPS.Lat." uom="°" mask="#0.0000000" key="RGPSLAT">
+		<MSPSource class="gps" field="latitude"></MSPSource>
+		<PX4Source field="GPS.Lat"></PX4Source>
+		<ULogSource field="vehicle_gps_position_0.lat">
+		  <Converter class="ExpressionConverter" expression="RGPSLAT/10000000" />
+		</ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS.Lon." uom="°" mask="#0.0000000" key="RGPSLON">
+		<MSPSource class="gps" field="longitude"></MSPSource>
+		<PX4Source field="GPS.Lon"></PX4Source>
+		<ULogSource field="vehicle_gps_position_0.lon">
+		 <Converter class="ExpressionConverter" expression="RGPSLON/10000000" />
+		</ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="No.Sat." uom="" mask="#0" key="RGPSNO">
+		<MSPSource class="gps" field="numsat"></MSPSource>
+		<PX4Source field="GPS.nSat"></PX4Source>
+		<ULogSource field="vehicle_gps_position_0.satellites_used"/>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+		<Validity min="6" max="30"/>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS HDOP" uom="m" mask="#0.0" key="RGPSHDOP">
+		<MSPSource class="gps" field="hdop"></MSPSource>
+		<ULogSource field="vehicle_gps_position_0.hdop"></ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS Speed" uom="m/s" mask="#0.0" key="RGPSV">
+		<MSPSource class="gps" field="speed"></MSPSource>
+		<ULogSource field="vehicle_gps_position_0.vel_m_s"></ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS Eph" uom="m" mask="#0.00" key="RGPSEPH">
+	    <MSPSource class="gps" field="eph"></MSPSource>
+	    <PX4Source field="LPOS.EPH"></PX4Source>
+		<ULogSource field="vehicle_gps_position_0.eph"></ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS Epv" uom="m" mask="#0.00" key="RGPSEPV">
+	    <MSPSource class="gps" field="epv"></MSPSource>
+	    <PX4Source field="LPOS.EPV"></PX4Source>
+		<ULogSource field="vehicle_gps_position_0.epv"></ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS Fix" uom="m" mask="#0.00" key="RGPSFIX">
+	    <MSPSource class="gps" field="fixtype"></MSPSource>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS Noise" uom="pms" mask="#0" key="RGPSNOISE">
+		<ULogSource field="vehicle_gps_position_0.noise_per_ms"></ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS.Variance" uom="m/s" mask="#0" key="RGPSVAR">
+		<ULogSource field="vehicle_gps_position_0.s_variance_m_s"></ULogSource>
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc= "SVIN accuracy" uom="m" mask="#0.0" key="SVINACC">
+		<Groups>
+			<Group>GPS</Group>
+		</Groups>
+  </KeyFigure>
+
+	<!-- Estimator data -->
+
+
+	<KeyFigure desc="EST0.s0" uom="" mask="#0.00" key="EST0S0">
+		<PX4Source field="EST0.s0"></PX4Source>
+		<ULogSource field="estimator_status_0.states[0]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s1" uom="" mask="#0.00" key="EST0S1">
+		<PX4Source field="EST0.s1"></PX4Source>
+		<ULogSource field="estimator_status_0.states[1]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s2" uom="" mask="#0.00" key="EST0S2">
+		<PX4Source field="EST0.s2"></PX4Source>
+		<ULogSource field="estimator_status_0.states[2]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s3" uom="" mask="#0.00" key="EST0S3">
+		<PX4Source field="EST0.s3"></PX4Source>
+		<ULogSource field="estimator_status_0.states[3]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s4" uom="" mask="#0.00" key="EST0S4">
+		<PX4Source field="EST0.s4"></PX4Source>
+		<ULogSource field="estimator_status_0.states[4]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s5" uom="" mask="#0.00" key="EST0S5">
+		<PX4Source field="EST0.s5"></PX4Source>
+		<ULogSource field="estimator_status_0.states[5]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s6" uom="" mask="#0.00" key="EST0S6">
+		<PX4Source field="EST0.s6"></PX4Source>
+		<ULogSource field="estimator_status_0.states[6]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s7" uom="" mask="#0.00" key="EST0S7">
+		<PX4Source field="EST0.s7"></PX4Source>
+		<ULogSource field="estimator_status_0.states[7]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="EST0.s8" uom="" mask="#0.00" key="EST0S8">
+		<PX4Source field="EST0.s8"></PX4Source>
+		<ULogSource field="estimator_status_0.states[8]"></ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="LPosXY valid" uom="" mask="#0" key="LPOSXYVAL">
+		<PX4Source field="LPOS.PFlg"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.xy_valid"/>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="LPosZ valid" uom="" mask="#0" key="LPOSZVAL">
+		<PX4Source field="LPOS.GFlg"></PX4Source>
+		<ULogSource field="vehicle_local_position_0.z_valid"/>
+		<Groups>
+			<Group>Local Position</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Baro timeout" uom="" mask="#0" key="TOBARO">
+		<PX4Source field="EST2.fHealth">
+		   <Converter class="BitMaskConverter" p1="0"/>
+		</PX4Source>
+		<ULogSource field="estimator_status_0.health_flags">
+		   <Converter class="BitMaskConverter" p1="0"/>
+		</ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPS timeout" uom="" mask="#0" key="TOGPS">
+		<PX4Source field="EST2.fHealth">
+		    <Converter class="BitMaskConverter" p1="1"/>
+		</PX4Source>
+		<ULogSource field="estimator_status_0.health_flags">
+		    <Converter class="BitMaskConverter" p1="1"/>
+		</ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="RangeFinder timeout" uom="" mask="#0" key="TOLIDAR">
+		<PX4Source field="EST2.fHealth">
+		   <Converter class="BitMaskConverter" p1="2"/>
+		</PX4Source>
+		<ULogSource field="estimator_status_0.health_flags">
+		   <Converter class="BitMaskConverter" p1="2"/>
+		</ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	 <KeyFigure desc="Flow timeout" uom="" mask="#0" key="TOFLOW">
+		<PX4Source field="EST2.fHealth">
+		   <Converter class="BitMaskConverter" p1="3"/>
+		</PX4Source>
+		<ULogSource field="estimator_status_0.health_flags">
+		   <Converter class="BitMaskConverter" p1="3"/>
+		</ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Sonar timeout" uom="" mask="#0" key="TOSONAR">
+		<PX4Source field="EST2.fHealth">
+		   <Converter class="BitMaskConverter" p1="4"/>
+		</PX4Source>
+		<ULogSource field="estimator_status_0.health_flags">
+		   <Converter class="BitMaskConverter" p1="4"/>
+		</ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Vision timeout" uom="" mask="#0" key="TOVIS">
+		<PX4Source field="EST2.fHealth">
+		    <Converter class="BitMaskConverter" p1="5"/>
+		 </PX4Source>
+		<ULogSource field="estimator_status_0.health_flags">
+		   <Converter class="BitMaskConverter" p1="5"/>
+		</ULogSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Landed" uom="" mask="#0" key="LANDED">
+	    <MSPSource class="sys" field="status">
+		  <Converter class="BitMaskConverter" p1="9"/>
+		</MSPSource>
+		<Groups>
+			<Group>Estimator Status</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<!-- Radio -->
+
+	<KeyFigure desc="RC Channel 0" uom="" mask="#0.0" key="RC0">
+		<MSPSource class="rc" field="s0">
+		  <Converter class="ExpressionConverter" expression="(RC0 - 1000) / 1000" />
+		</MSPSource>
+		<PX4Source field="RC.C0">
+		  <Converter class="ExpressionConverter" expression="(RC0 - 1000) / 1000" />
+		</PX4Source>
+		<ULogSource field="rc_channels_0.channels[0]">
+		  <Converter class="ExpressionConverter" expression="(RC0 - 1000) / 1000" />
+		</ULogSource>
+		<Groups>
+			<Group>Radio Control</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="RC Channel 1" uom="" mask="#0.0" key="RC1">
+		<MSPSource class="rc" field="s1">
+		  <Converter class="ExpressionConverter" expression="(RC1 - 1500) / 1000" />
+		</MSPSource>
+		<PX4Source field="RC.C1">
+		  <Converter class="ExpressionConverter" expression="(RC1 - 1500) / 1000" />
+		</PX4Source>
+		<ULogSource field="rc_channels_0.channels[1]">
+		  <Converter class="ExpressionConverter" expression="(RC1 - 1500) / 1000" />
+		</ULogSource>
+		<Groups>
+			<Group>Radio Control</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="RC Channel 2" uom="" mask="#0.0" key="RC2">
+		<MSPSource class="rc" field="s2">
+		  <Converter class="ExpressionConverter" expression="(RC2 - 1500) / 1000" />
+		</MSPSource>
+		<PX4Source field="RC.C2">
+		  <Converter class="ExpressionConverter" expression="(RC2 - 1500) / 1000" />
+		</PX4Source>
+		<ULogSource field="rc_channels_0.channels[2]">
+		  <Converter class="ExpressionConverter" expression="(RC2 - 1500) / 1000" />
+		</ULogSource>
+		<Groups>
+			<Group>Radio Control</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="RC Channel 3" uom="" mask="#0.0" key="RC3">
+		<MSPSource class="rc" field="s3">
+		  <Converter class="ExpressionConverter" expression="(RC3 - 1500) / 1000" />
+		</MSPSource>
+		<PX4Source field="RC.C3">
+		  <Converter class="ExpressionConverter" expression="(RC3 - 1500) / 1000" />
+		</PX4Source>
+		<ULogSource field="rc_channels_0.channels[3]">
+		  <Converter class="ExpressionConverter" expression="(RC3 - 1500) / 1000" />
+		</ULogSource>
+		<Groups>
+			<Group>Radio Control</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="RSSI" uom="%" mask="#0" key="RSSI">
+		<MSPSource class="rc" field="rssi">
+		   <Converter class="ExpressionConverter" expression="RSSI/100" />
+		</MSPSource>
+		<ULogSource field="rc_channels_0.rssi">
+		  <Converter class="ExpressionConverter" expression="RSSI/100" />
+		</ULogSource>
+		<Groups>
+			<Group>Radio Control</Group>
+		</Groups>
+		<Validity min="0.2" max="10.0"/>
+	</KeyFigure>
+
+	<!-- System & Power -->
+
+	<KeyFigure desc="Voltage" uom="V" mask="#0.0" key="BATV">
+		<MSPSource class="battery" field="b0"></MSPSource>
+		<PX4Source field="BATT.V"></PX4Source>
+		<ULogSource field="battery_status_0.voltage_filtered_v"/>
+		<Groups>
+			<Group>Battery</Group>
+			<Group>System</Group>
+		</Groups>
+		<Validity min="10.5" max="15.0"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Current" uom="A" mask="#0.0" key="BATC">
+		<MSPSource class="battery" field="c0"></MSPSource>
+		<PX4Source field="BATT.C"></PX4Source>
+		<ULogSource field="battery_status_0.current_filtered_a"/>
+		<Groups>
+			<Group>Battery</Group>
+		</Groups>
+		<Validity min="0.0" max="30.0"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Consumed.Power" uom="mAh" mask="#0" key="BATH">
+		<MSPSource class="battery" field="a0"></MSPSource>
+		<ULogSource field="battery_status_0.discharged_mah"/>
+		<Groups>
+			<Group>Battery</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Batt. Temperature" uom="°C" mask="#0" key="BATT">
+		<MSPSource class="sys" field="bat_temp"></MSPSource>
+		<Groups>
+			<Group>Battery</Group>
+			<Group>System</Group>
+		</Groups>
+		<Validity min="0" max="80"/>
+	</KeyFigure>
+
+	<KeyFigure desc="Capacity" uom="%" mask="#0" key="BATP">
+		<MSPSource class="battery" field="p">
+		   <Converter class="ExpressionConverter" expression="BATP/100" />
+		</MSPSource>
+		<Groups>
+			<Group>Battery</Group>
+		</Groups>
+		<Validity min="0.2" max="1.0"/>
+	</KeyFigure>
+
+	<KeyFigure desc="PX4 CPU Load" uom="%" mask="#0" key="CPUPX4">
+		<MSPSource class="sys" field="load_p">
+		   <Converter class="ExpressionConverter" expression="CPUPX4/100" />
+		</MSPSource>
+		<PX4Source field="LOAD.CPU">
+		   <Converter class="ExpressionConverter" expression="CPUPX4/100" />
+		</PX4Source>
+		<ULogSource field="cpuload_0.load">
+		   <Converter class="ExpressionConverter" expression="CPUPX4/100" />
+		</ULogSource>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+		<Validity min="0" max="0.85"/>
+	</KeyFigure>
+
+	<KeyFigure desc="MSP CPU Load" uom="%" mask="#0" key="CPUMSP">
+		<MSPSource class="sys" field="load_m">
+		   <Converter class="ExpressionConverter" expression="CPUMSP/100" />
+		</MSPSource>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+		<Validity min="0" max="0.85"/>
+	</KeyFigure>
+	
+	<KeyFigure desc="MSP Memory" uom="" mask="#0" key="MEMMSP">
+		<MSPSource class="sys" field="mem_m"/>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="IMU Temperature" uom="°C" mask="#0" key="IMUTEMP">
+		<MSPSource class="sys" field="imu_temp"></MSPSource>
+		<PX4Source field="SENS.BaroTemp"></PX4Source>
+		<ULogSource field="sensor_baro_0.temperature"></ULogSource>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+		<Validity min="10" max="70"/>
+	</KeyFigure>
+
+	<KeyFigure desc="MSP Temperature" uom="°C" mask="#0" key="MSPTEMP">
+		<MSPSource class="sys" field="msp_temp"/>
+		<Validity min="10" max="70"/>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Time armed" uom="sec" mask="#0" key="TARM">
+		<MSPSource class="sys" field="t_armed_ms">
+		    <Converter class="ExpressionConverter" expression="TARM/1000" />
+		</MSPSource>
+	</KeyFigure>
+
+	<KeyFigure desc="Time boot" uom="sec" mask="#0" key="TBOOT">
+		<MSPSource class="sys" field="t_boot_ms">
+		    <Converter class="ExpressionConverter" expression="TBOOT/1000"/>
+		</MSPSource>
+	</KeyFigure>
+
+	<KeyFigure desc="Wifi quality" uom="%" mask="#0.00" key="SWIFI">
+		<MSPSource class="sys" field="wifi_quality"/>
+		<Validity min="0.2" max="1.0"/>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+	</KeyFigure>
+
+  <!-- VISION definitions -->
+
+  <KeyFigure desc="Vis.X" uom="m" mask="#0.00" key="VISIONX">
+		<MSPSource class="vision" field="x"/>
+		<ULogSource field="vehicle_vision_position_0.x"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Y" uom="m" mask="#0.00" key="VISIONY">
+		<MSPSource class="vision" field="y"/>
+		<ULogSource field="vehicle_vision_position_0.y"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Z" uom="m" mask="#0.00" key="VISIONZ">
+		<MSPSource class="vision" field="z"/>
+		<ULogSource field="vehicle_vision_position_0.z"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="GrndTruth.X" uom="m" mask="#0.00" key="GNDTRUTHX">
+		<MSPSource class="vision" field="gx"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="GrndTruth.Y" uom="m" mask="#0.00" key="GNDTRUTHY">
+		<MSPSource class="vision" field="gy"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="PrecLock.X" uom="m" mask="#0.00" key="PRECLOCKX">
+		<MSPSource class="vision" field="px"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="PrecLock.Y" uom="m" mask="#0.00" key="PRECLOCKY">
+		<MSPSource class="vision" field="py"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+  
+   <KeyFigure desc="PrecLock.Orientation" uom="°" mask="#0.0" key="PRECLOCKW">
+		<MSPSource class="vision" field="pw">
+		  <Converter class="Rad2DegreeConverter" expression="PRECLOCKW" />
+		</MSPSource>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="GrndTruth.Z" uom="m" mask="#0.00" key="GNDTRUTHZ">
+		<MSPSource class="vision" field="gz"/>
+		<Groups>
+		  <Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.VX" uom="m/s" mask="#0.00" key="VISIONVX">
+		<MSPSource class="vision" field="vx"/>
+		<ULogSource field="vehicle_vision_position_0.vx"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.VY" uom="m/s" mask="#0.00" key="VISIONVY">
+		<MSPSource class="vision" field="vy"/>
+		<ULogSource field="vehicle_vision_position_0.vy"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.VZ" uom="m/s" mask="#0.00" key="VISIONVZ">
+		<MSPSource class="vision" field="vz"/>
+		<ULogSource field="vehicle_vision_position_0.vz"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Cov.X" uom="m" mask="#0.00" key="VISIONCOVX">
+		<MSPSource class="vision" field="cov_px"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+   <KeyFigure desc="Vis.Cov.Y" uom="m" mask="#0.00" key="VISIONCOVY">
+		<MSPSource class="vision" field="cov_py"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+   <KeyFigure desc="Vis.Cov.Z" uom="m" mask="#0.00" key="VISIONCOVZ">
+		<MSPSource class="vision" field="cov_pz"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Cov.VX" uom="m" mask="#0.00" key="VISIONCOVVX">
+		<MSPSource class="vision" field="cov_vx"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+   <KeyFigure desc="Vis.Cov.VY" uom="m" mask="#0.00" key="VISIONCOVVY">
+		<MSPSource class="vision" field="cov_vy"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+   <KeyFigure desc="Vis.Cov.VZ" uom="m" mask="#0.00" key="VISIONCOVVZ">
+		<MSPSource class="vision" field="cov_vz"/>
+		<Groups>
+				<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Pos.Error" uom="m" mask="#0.00" key="VISIONPOSE">
+		<ULogSource field="vehicle_vision_position_0.epv"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Yaw" uom="rad" mask="#0.0" key="VISIONYAW">
+		<MSPSource class="vision" field="h"/>
+		<Groups>
+			<Group>Vision</Group>
+			<Group>Attitude</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Heading" uom="°" mask="#0.0" key="VISIONH">
+		<MSPSource class="vision" field="h">
+		   <Converter class="Rad2DegreeConverter" expression="VISIONH" />
+		</MSPSource>
+		<Groups>
+			<Group>Vision</Group>
+			<Group>Attitude</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Pitch" uom="rad" mask="#0.00" key="VISIONP">
+		<MSPSource class="vision" field="p"/>
+		<ULogSource>
+		  <Converter class="QuaternionConverter" p1="vehicle_vision_attitude_0.q" p2="1"/>
+		</ULogSource>
+		<Groups>
+			<Group>Vision</Group>
+			<Group>Attitude</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Vis.Roll" uom="rad" mask="#0.00" key="VISIONR">
+		<MSPSource class="vision" field="r"/>
+		<ULogSource>
+		  <Converter class="QuaternionConverter" p1="vehicle_vision_attitude_0.q" p2="0"/>
+		</ULogSource>
+		<Groups>
+			<Group>Vision</Group>
+			<Group>Attitude</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Odom.FrameRate" uom="fps" mask="#0" key="VISIONFPS">
+		<MSPSource class="vision" field="fps"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Odom.Flags" uom="" mask="#0" key="VISIONFLAGS">
+		<MSPSource class="vision" field="flags"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Odom.Quality" uom="%" mask="#0.0" key="VISIONQUAL">
+		<MSPSource class="vision" field="qual">
+		   <Converter class="ExpressionConverter" expression="VISIONQUAL/100" />
+		 </MSPSource>
+		 <Validity min="0.1" max="1.0"/>
+		<Groups>
+			<Group>Vision</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Debug X" uom="" mask="#0.00" key="DEBUGX">
+		<MSPSource class="debug" field="x"/>
+		<Groups>
+			<Group>Debug</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Debug Y" uom="" mask="#0.00" key="DEBUGY">
+		<MSPSource class="debug" field="y"/>
+		<Groups>
+			<Group>Debug</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="Debug Z" uom="" mask="#0.00" key="DEBUGZ">
+		<MSPSource class="debug" field="z"/>
+		<Groups>
+			<Group>Debug</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="MAVGCL Cycle" uom="ms" mask="#0" key="MAVGCLACC">
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+  </KeyFigure>
+
+  <KeyFigure desc="MAVGCL Network" uom="kb/s" mask="#0.0" key="MAVGCLNET">
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+  </KeyFigure>
+
+
+  <!-- virtual keyfigure definition  -->
+
+	<KeyFigure desc="Loc.Pos.Z error" uom="m" mask="#0.00" key="LPOSZERR">
+		<VirtualSource>
+		    <Converter class="VirtualConverter" expression="abs(LPOSZ - SPLPOSZ)" var0="LPOSZ" var1="SPLPOSZ"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Altitude</Group>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Loc.Pos.VZ error" uom="m" mask="#0.00" key="LPOSVZERR">
+		<VirtualSource>
+		    <Converter class="VirtualConverter" expression="abs(LPOSVZ - SPLPOSVZ)" var0="LPOSVZ" var1="SPLPOSVZ"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Loc.Pos.X error" uom="m" mask="#0.00" key="LPOSXERR">
+		<VirtualSource>
+		    <Converter class="VirtualConverter" expression="abs(LPOSX - SPLPOSX)" var0="LPOSX" var1="SPLPOSX"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Heading error" uom="m" mask="#0.00" key="HEADERR">
+		<VirtualSource>
+		    <Converter class="VirtualConverter" expression="abs(HEAD - VISIONH)" var0="HEAD" var1="VISIONH"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Loc.Pos.Y error" uom="m" mask="#0.00" key="LPOSYERR">
+		<VirtualSource>
+		    <Converter class="VirtualConverter" expression="abs(LPOSY - SPLPOSY)" var0="LPOSY" var1="SPLPOSY"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Loc.Pos.XY error" uom="m" mask="#0.00" key="LPOSXYERR">
+		<VirtualSource>
+		    <Converter class="VirtualConverter"
+		       expression="sqrt( (LPOSX - SPLPOSX) * (LPOSX - SPLPOSX) + (LPOSY - SPLPOSY) * (LPOSY - SPLPOSY) )"
+		       var0="LPOSX" var1="SPLPOSX" var2="LPOSY" var3="SPLPOSY"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+
+	<KeyFigure desc="LPosX RMSE10" uom="m" mask="#0.00" key="LPOSXRMSE">
+		<VirtualSource>
+		    <Converter class="RMSEConverter2" var0="LPOSX" var1="SPLPOSX" var2="200"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="LPosY RMSE10" uom="m" mask="#0.00" key="LPOSYRMSE">
+		<VirtualSource>
+		    <Converter class="RMSEConverter2" var0="LPOSY" var1="SPLPOSY" var2="200"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="LPosZ RMSE10" uom="m" mask="#0.00" key="LPOSZRMSE">
+		<VirtualSource>
+		    <Converter class="RMSEConverter2" var0="LPOSZ" var1="SPLPOSZ" var2="200"/>
+		</VirtualSource>
+		<Validity min="0" max="0.3"/>
+		<Groups>
+			<Group>Virtual keyfigures</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- SLAM data -->
+
+	<KeyFigure desc="Path.X" uom="m" mask="#0.00" key="SLAMPX">
+		<MSPSource class="slam" field="px"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="Path.Y" uom="m" mask="#0.00" key="SLAMPY">
+		<MSPSource class="slam" field="py"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="Path.Z" uom="m" mask="#0.00" key="SLAMPZ">
+		<MSPSource class="slam" field="pz"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="Path.Direction" uom="rad" mask="#0.00" key="SLAMDIR">
+		<MSPSource class="slam" field="pd"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+	<KeyFigure desc="Path distance" uom="m" mask="#0.0" key="SLAMDTT">
+		<MSPSource class="slam" field="di"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Path.Speed" uom="m/s" mask="#0.0" key="SLAMSPD">
+		<MSPSource class="slam" field="pv"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Offboard.Flags" uom="m/s" mask="#0.0" key="SLAMFLG">
+		<MSPSource class="slam" field="flags"></MSPSource>
+		<Groups>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Depth.Quality" uom="%" mask="#0.0" key="SLAMQU">
+		<MSPSource class="slam" field="quality">
+		   <Converter class="ExpressionConverter" expression="SLAMQU/100" />
+		</MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="WayPoint" uom="" mask="#000" key="SLAMWP">
+		<MSPSource class="slam" field="wpcount"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Dist.Obstacle" uom="m" mask="#0.0" key="SLAMDTO">
+		<MSPSource class="slam" field="dm"></MSPSource>
+		<Groups>
+			<Group>Local Position</Group>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Obstacle.X" uom="m" mask="#0.00" key="SLAMOBX">
+		<MSPSource class="slam" field="ox"></MSPSource>
+		<Groups>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Obstacle.Y" uom="m" mask="#0.00" key="SLAMOBY">
+		<MSPSource class="slam" field="oy"></MSPSource>
+		<Groups>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+	
+	<KeyFigure desc="Obstacle.Z" uom="m" mask="#0.00" key="SLAMOBZ">
+		<MSPSource class="slam" field="oz"></MSPSource>
+		<Groups>
+			<Group>Mapping</Group>
+		</Groups>
+	</KeyFigure>
+
+	<!-- Status Flags  -->
+
+	<KeyFigure desc="LPOS valid" uom="" mask="#" key="FLAGLPOS">
+		<MSPSource class="sys" field="status">
+             <Converter class="BitMaskConverter" p1="12"/>
+		</MSPSource>
+		<ULogSource field="vehicle_status_flags_0.condition_local_position_valid"/>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="GPOS valid" uom="" mask="#" key="FLAGGPOS">
+		<MSPSource class="sys" field="status">
+             <Converter class="BitMaskConverter" p1="11"/>
+		</MSPSource>
+		<ULogSource field="vehicle_status_flags_0.condition_global_position_valid"/>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+	</KeyFigure>
+
+	<KeyFigure desc="Nav.State" uom="" mask="#" key="NAVSTATE">
+		<MSPSource class="sys" field="nav_state"/>
+		<ULogSource field="vehicle_status_0.nav_state"/>
+		<Groups>
+			<Group>System</Group>
+		</Groups>
+	</KeyFigure>
+
+
+</AnalysisDataModel>
