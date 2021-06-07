@@ -19,7 +19,7 @@
 			<arg line="-c ' C:/Autonomia_develop/USER/mvn/bin clean install'" />
 		</exec>
 	</target>
-	<target name="deploy_window" depends="mvn">
+	<target name="deploy_windows" depends="mvn">
 		<fx:deploy width="1230" height="865" outdir="dist/deploy" outfile="MAVGAnalysis" nativeBundles="msi">
 			<fx:application name="MAVGAnalysis" mainClass="com.comino.flight.MainApp" version="0.16">
 
